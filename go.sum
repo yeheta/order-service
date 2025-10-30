@@ -1,0 +1,17 @@
+github.com/gorilla/context v1.1.1/go.mod h1:kBGZzfjB9CEq2AlWe17Uuf7NDRt0dE0s8S51q0aT7Yg=
+github.com/gorilla/mux v1.8.0 h1:TuBL49tXwgrFYWhqrNgrUNEY92u81SPhu7sTdzQEqiW=
+github.com/gorilla/mux v1.8.0/go.mod h1:Vb8rUb6S0uTf1h2uHeG+7bYq0LR6SfMwvVSeZGk8GkI=
+github.com/lib/pq v1.10.9 h1:YXG7u+3S3KkaqoxXGWGCWOcF3ghoVdUR2bS7irw1xL4=
+github.com/lib/pq v1.10.9/go.mod h1:AlVN5x4E4T544tWzH6hKfbfQvm3HdbOxrmggDNAPY9o=
+github.com/nats-io/nats.go v1.28.0 h1:5d8uV8zT3wNp2Hp2o2PMIcBxbjx83tF13dXKX+Q+Wvk=
+github.com/nats-io/nats.go v1.28.0/go.mod h1:6qS0bLvNK2FdXdaHcz90U3Vlx5TnjWCH6PjXGc3DL/w=
+github.com/nats-io/nkeys v0.4.4 h1:IzVe95ru2CT6ta874rt9saQRkWfe2nFj1NtvYSLqLfk=
+github.com/nats-io/nkeys v0.4.4/go.mod h1:X4jBs2glmy2j4c1rv7pk5DvQ7NpMWQJ08NK87oZR9mk=
+github.com/nats-io/nuid v1.0.1 h1:5iA8DT8V7q8WK2EScv2padNa/rTESc1KdnPw4TC2paw=
+github.com/nats-io/nuid v1.0.1/go.mod h1:19wcPz3Ph3q0Jbyiqsd0kePYG7A95tJPxeL+1OSON2c=
+github.com/nats-io/stan.go v0.10.4 h1:2FfQyeXLN7UOeM+81dNloM0Bk3rgZ68CNq9LzqWc6bk=
+github.com/nats-io/stan.go v0.10.4/go.mod h1:8HGH1Gk2g+sa4h2dF7bXvMHK72/7sF4r5mQ6K6ZpJ7E=
+golang.org/x/crypto v0.12.0 h1:tFM/ta59kqch6LlvYnPa0yx5a83cL2nHflFhYKvv9Yk=
+golang.org/x/crypto v0.12.0/go.mod h1:NF0Gs7EO5K4qLn+Ylc+fih8BSTeIjAP05siRnAh98yw=
+golang.org/x/sys v0.11.0 h1:eG7RXZHdqOJ1i+0lgLgCpSXAp6M3LYlAo6osgSi0xOM=
+golang.org/x/sys v0.11.0/go.mod h1:oPkhp1MJrh7nUepCBck5+mAzfO9JrbApNNgaTdGDITg=

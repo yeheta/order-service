@@ -1,0 +1,61 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:14
+    environment:
+      POSTGRES_DB: order_service
+      POSTGRES_USER: order_user
+      POSTGRES_PASSWORD: order_password
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./migrations:/docker-entrypoint-initdb.d
+    networks:
+      - order-network
+
+  nats:
+    image: nats-streaming:0.25.2
+    ports:
+      - "4222:4222"
+      - "8222:8222"
+    command: ["-p", "4222", "-m", "8222", "-SD", "-cid", "test-cluster"]
+    networks:
+      - order-network
+
+  api:
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      - DB_HOST=postgres
+      - DB_PORT=5432
+      - DB_USER=order_user
+      - DB_PASSWORD=order_password
+      - DB_NAME=order_service
+      - NATS_URL=nats://nats:4222
+      - SERVER_PORT=8080
+    depends_on:
+      - postgres
+      - nats
+    networks:
+      - order-network
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "3000:3000"
+    environment:
+      - REACT_APP_API_URL=http://localhost:8080
+    depends_on:
+      - api
+    networks:
+      - order-network
+
+volumes:
+  postgres_data:
+
+networks:
+  order-network:
+    driver: bridge
